@@ -6,4 +6,12 @@
 	<li>
 		<%= link_to "Edit", edit_document_path(@document) %>
 	</li>
+	<li>	
+		<%= link_to "Destroy", document_path(@document),
+								method: :delete,
+								data: { confirm: "Are you sure?" } %>
+	</li>
+	<li>
+		<%= link_to "All Documents", documents_path %>
+	</li>
 </ul>
