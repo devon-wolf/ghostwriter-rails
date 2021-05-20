@@ -1,3 +1,9 @@
 <h1><%= @document.title %></h1>
 
 <p><%= @document.body %></p>
+
+<ul>
+	<li>
+		<%= link_to "Edit", edit_document_path(@document) %>
+	</li>
+</ul>
