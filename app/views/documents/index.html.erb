@@ -2,7 +2,7 @@
 <ul>
 	<% @documents.each do |document| %>
 		<li>
-			<%= document.title %>
+			<%= link_to document.title, document %>
 		</li>
 	<% end %>
 </ul>
