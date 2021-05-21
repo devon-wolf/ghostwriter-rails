@@ -1,8 +1,9 @@
-<h1><%= @document.title %></h1>
+<div class="document">
+	<h1><%= @document.title %></h1>
+	<p><%= @document.body %></p>
+</div>
 
-<p><%= @document.body %></p>
-
-<ul>
+<ul class="actions">
 	<li>
 		<%= link_to "Edit", edit_document_path(@document) %>
 	</li>
@@ -11,14 +12,16 @@
 								method: :delete,
 								data: { confirm: "Are you sure?" } %>
 	</li>
-	<li>
-		<%= link_to "All Documents", documents_path %>
-	</li>
 </ul>
 
-<h2>Comments</h2>
-<%= render @document.comments %>
+<details>
+	<summary>Comments</summary>
+	<%= render @document.comments %>
+</details>
 
-<h2>New Comment</h2>
-<%= render 'comments/form' %>
+<details>
+	<summary>New Comment</summary>
+	<%= render 'comments/form' %>
+</details>
 
+<%= link_to "All Documents", documents_path %>
