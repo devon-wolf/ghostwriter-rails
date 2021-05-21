@@ -15,3 +15,10 @@
 		<%= link_to "All Documents", documents_path %>
 	</li>
 </ul>
+
+<h2>Comments</h2>
+<%= render @document.comments %>
+
+<h2>New Comment</h2>
+<%= render 'comments/form' %>
+
