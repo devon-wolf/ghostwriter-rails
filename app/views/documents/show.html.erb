@@ -1,29 +1,36 @@
-<div class="document">
-	<h1><%= @document.title %></h1>
-	<textarea class="document-text"><%= @document.body %></textarea>
-</div>
-
-<ul class="actions">
-	<li>
-		<%= link_to "Edit", edit_document_path(@document) %>
-	</li>
-	<li>	
-		<%= link_to "Destroy", document_path(@document),
+<div class="document-wrapper">
+	<nav>
+		<ul class="actions">
+			<li>
+				<%= link_to "Edit", edit_document_path(@document) %>
+			</li>
+			<li>	
+				<%= link_to "Destroy", document_path(@document),
 								method: :delete,
 								data: { confirm: "Are you sure?" } %>
-	</li>
-</ul>
+			</li>
+		</ul>
 
-<details>
-	<summary>Comments</summary>
-	<%= render @document.comments %>
-</details>
+		<%= link_to "All Documents", documents_path %>
+	</nav>
 
-<details>
-	<summary>New Comment</summary>
-	<%= render 'comments/form' %>
-</details>
+	<div class="document">
+		<h1><%= @document.title %></h1>
+		<textarea class="document-text"><%= @document.body %></textarea>
+	</div>
 
-<%= link_to "All Documents", documents_path %>
+	<aside class="comment-sidebar">
+		<details>
+			<summary>Comments</summary>
+			<%= render @document.comments %>
+		</details>
 
+		<details>
+			<summary>New Comment</summary>
+			<%= render 'comments/form' %>
+		</details>
+	</aside>
+
+	
+</div>
 <%= javascript_pack_tag 'show' %>
