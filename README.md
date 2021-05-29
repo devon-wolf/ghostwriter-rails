@@ -1,24 +1,3 @@
-# README
+# ghostwriter (on rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+An experiment to see if the writing and editing project I'm envisioning is well suited to Rails, which I think it might be. Will probably have a hefty dose of JavaScript powering the UI.
