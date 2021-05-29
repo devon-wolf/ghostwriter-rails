@@ -1,6 +1,6 @@
 <div class="document">
 	<h1><%= @document.title %></h1>
-	<p><%= @document.body %></p>
+	<textarea class="document-text"><%= @document.body %></textarea>
 </div>
 
 <ul class="actions">
@@ -25,3 +25,5 @@
 </details>
 
 <%= link_to "All Documents", documents_path %>
+
+<%= javascript_pack_tag 'show' %>

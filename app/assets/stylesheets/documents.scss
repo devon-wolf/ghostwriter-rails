@@ -16,3 +16,17 @@
 	margin: 0;
 	padding-left: unset;
 }
+
+.document-text {
+	width: 100%;
+	min-height: 60vh;
+	resize: none;
+	border: none;
+	background-color: unset;
+	overflow: hidden;
+	font-size: 1.25rem;
+}
+
+.document-text:focus {
+	outline: none;
+}
